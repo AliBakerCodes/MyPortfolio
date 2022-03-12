@@ -1,0 +1,7 @@
+/* Declare variables for theme colors */
+:root {
+    --background: #333940;
+    --bodytext: #e867ed;
+    --bordercolor: #e0eae5;
+    --codetext: #fff;
+}
