@@ -1,4 +1,4 @@
-/* Declare variables for theme colors */
+/* Declare variables for theme colors and font */
 :root {
   --bodytext: rgb(230, 230, 230);
   --bordercolor: #e0eae5;
@@ -18,12 +18,12 @@ font-family: var(-mont) ;
   color: var(--bodytext);
   background-color: #2e2e2e;
   justify-content: center;
-  /* background-image: url("../images/114804-landscape-photography-of-black-mountain-hd-wallpaper.jpg");
+  background-image: url("../images/someclouds.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
   background-size: cover;
-  background-position: center; */
+  background-position: center;
 }
 
 h2 {
@@ -146,9 +146,9 @@ footer {
 }
 
 #about-me img {
-  height: 83%;
-  width: 50%;
   top: 2rem;
+  float: left;
+  margin-right: 2.5rem;
 }
 #about-me p {
   position: relative;
@@ -157,8 +157,7 @@ footer {
   height: 100%;
 }
 .float-left {
-  float: left;
-  margin-right: 2.5rem;
+ 
 }
 
 
@@ -176,13 +175,6 @@ footer {
   border-radius: 1rem;
   padding: 1rem;
   flex: 0 0 400px;
-
-  background-image: var(--bg-image);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: 50% 50%;
-  background-size: cover;
-  background-position: center;
 }
 
 .card header {
@@ -225,4 +217,68 @@ footer {
   #holler a:hover {
     text-decoration: overline;
     text-decoration: underline;
+  }
+
+  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+
+  @media screen and (min-width: 390px) {
+    /* on phones, set columns to only be 33% of the width and not grow */
+  
+      
+      .hero h1 {
+        /* 4rem = 40px (4 * 10px) */
+        font-size: 5rem;
+        font-family: var(--mont);
+        font-weight: 400;
+        letter-spacing: 1rem;
+      }
+      
+      .hero .hero-bottom-text {
+        font-size: 9rem;
+        letter-spacing: 1rem;
+        font-weight: 600;
+      }
+    
+      #about-me img {
+        top: 2rem;
+        width:33%;
+        height:33%;
+        float:none;
+      }
+    
+      .card{
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+  @media screen and (min-width: 768px) {
+    /* on tablets, set columns to only be 50% of the width and not grow */
+    .card-column {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  
+    /* select the last child to grow to full width if it has space to grow */
+    .card-column:last-child {
+      flex-grow: 1;
+    }
+  }
+  #holler ul {
+    display: inline-block;
+    justify-content: space-between;
+    min-width: 200px;
+    font-family: var(--mont);
+    font-size: 1rem;
+  }
+  
+  /* media query for larger screens */
+  @media screen and (min-width: 992px) {
+    header {
+      width: 100%;
+    }
+  
+    .card-column {
+      flex: 0 0 33.333%;
+      max-width: 33.333%;
+    }
   }
