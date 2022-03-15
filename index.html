@@ -8,83 +8,84 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
      <!-- Header -->
      <header>
-         <h1>Ali Baker Codes</h1>
          <!-- Nav Links -->
-         <ul>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#holler">Holler</a></li>
-        </ul>
+         <nav>
+            <ul>
+                <li><a href="#who">WHO</a></li>
+                <li> ● </li>
+                <li><a href="#grind">GRIND</a></li>
+                <li> ● </li>
+                <li><a href="#holler">HOLLER</a></li>
+            </ul>
+        </nav>
     </header>
-    <!-- Hero Image -->
-    <section class="hero"></section>
-    <!-- side bar -->
-    <nav>
-        <ul>
-            <li>About Me</li>
-            <li>Projects</li>
-            <li>Holler</li>
-        </ul>
-    </nav>
-    <!-- about me section -->
-    <main>
-    <section id="about-me">
-        <img class = "float-left" src="./assets/images/hiker.png">
-        <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, sapiente? Explicabo maiores doloremque incidunt veniam a aspernatur tenetur rem quos magni officia rerum, soluta ad, perspiciatis quisquam asperiores sint omnis!
-        </p>
+    <!-- Hero -->
+     <section class="hero">
+    <h1>ALI BAKER</h1>
+    <span class="hero-bottom-text">CODES</span> <br>
+    __________________________________________________<br>
+    <span class = "hero-blurb">Servin' up code like Waffle House</span>
     </section>
-    <!-- project section -->
-    <setion id="section-projects">
-        <!-- make first project really big and stand out -->
-        <figure class="card-main">
-            <h2>CSS Cheat Sheet</h2>
-            <p class="project-blurb">
-                CSS Code Clips
-            </p>
-            </figure>
-        </div>
-        <section class="card-other row justify-center">
-            <div class="card-colum">
-                <figure class="card">
-                    <h2>Horiseon</h2>
-                    <p class="project-blurb">
-                        Landing Page
-                    </p>
-                </figure>
-            </div>
-            <div class="card-colum">
-                <figure class="card">
-                    <h2>Project3</h2>
-                    <p class="project-blurb">
-                        Project Blurb
-                    </p>
-                </figure>
-            </div>
-            <div class="card-colum">
-                <figure class="card">
-                    <h2>Project4</h2>
-                    <p class="project-blurb">
-                        Project Blurb
-                    </p>
-                </figure>
+    <!-- Main -->
+    <main>
+        <section class="content-container">
+            <a id="who"></a>
+            <h3 class="section-title">WHO</h3>
+            <section id="about-me">
+                <img class = "float-left" src="./assets/images/hiker.png">
+                <p>
+                    Based out of Atlanta, Georgia, I'm a coder and tech enthusiast who has been writing code since the 4th grade. I have worked for companies large and small, mainly with ERP systems and logistics. I have the ability to adapt to any tech stack to fit your company's needs. I'm a father of a teenager and 2 dogs!
+                </p>
+            </section>
+        </section>
+        <!-- Grind Section with flexboxes -->
+            <section class="content-container">
+                <a id="grind"></a>
+                <h3 class="section-title">GRIND</h3>
+            
+            <div class="grind" >
+                <section class="card"><img src="./assets/images/CSS-Snippet-Cheatsheet.png" alt="CSS Snippet Cheat Sheet thumbnail">
+                  <div class="card-heading">CSS Cheat Sheet</div>
+                  <p>CSS Code Clips</p>
+                </section>
+                <section class="card">
+                    <img src="./assets/images/Horiseons.png">
+                  <header>Horiseon</header>
+                  <p>Landing Page</p>
+                </section>
+                <section class="card" style="--bg-image: url('http://via.placeholder.com/200');">
+                  <header>Project3</header>
+                  <p>Coming Soon</p>
+                </section>
+                <section class="card" style="--bg-image: url('http://via.placeholder.com/200');">
+                  <header>Project4</header>
+                  <p>Coming Soon</p>
+                </section>
             </div>
         </section>
-    </setion>
-    <section id="#holler">
+    </div>
+    <section class="content-container">
+        <a id="holler"></a>
+        <h3 class="section-title">HOLLER</h3>
+        <section id="holler">
         <ul>
-            <a><a href="mailto://alibakercodes@gmail.com" alt="Email Address alibakercodes@gmail.com"></a>alibakercodes@gmail.com</a></li>
+            <a><a href="mailto:alibakercodes@gmail.com" alt="Email Address alibakercodes@gmail.com">alibakercodes@gmail.com</a></li>
             <li><a href="tel:+15555555">+1 555.555.5555</a></li>
             <li><a href="https://github.com/AliBakerCodes">github.com/AliBakerCodes</a></li>
         </ul>
+        </section>
     </section>
-    <footer>
-        <h3>&copy; AliBakerCodes</h3>
-    </footer>
 </main>
+<footer>
+    _________________________________
+    <h3>&copy; AliBakerCodes</h3>
+</footer>
 </body>
 </html>
