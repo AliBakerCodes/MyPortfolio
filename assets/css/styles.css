@@ -262,8 +262,15 @@ top: -5rem;
   }
  
   
-  @media screen and (max-width: 769) {
+  @media screen and (max-width: 870px) {
     header {
       width: 100%;
     } 
+    #holler ul {
+        display: block;
+        justify-content: space-between;
+        min-width: 200px;
+        font-family: var(--mont);
+        font-size: 1.5rem;
+      }
 } 
