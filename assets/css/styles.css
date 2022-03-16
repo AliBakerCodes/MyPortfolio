@@ -1,6 +1,6 @@
 /* Declare variables for theme colors and font */
 :root {
-  --bodytext: rgb(230, 230, 230);
+  --bodytext: rgb(219, 217, 217);
   --bordercolor: #e0eae5;
   --cardtext: #fff;
   --mont: "Montserrat", sans-serif;
@@ -25,7 +25,7 @@ font-family: var(-mont) ;
   background-size: cover;
   background-position: center;
 }
-
+/* Header sizes */
 h2 {
   font-size: 3.5rem;
 }
@@ -34,18 +34,11 @@ h3 {
   font-size: 3rem;
 }
 
-h4 {
-  font-size: 2.5rem;
-}
-
-h5 {
-  font-size: 2rem;
-}
-
-h6 {
+#footer-text {
   font-size: 1.5rem;
+  font-style: normal;
 }
-
+/* Header with Nav */
 header {
   display: flex;
   justify-content: space-between;
@@ -63,6 +56,7 @@ header nav ul {
   letter-spacing: 1rem;
 }
 
+
 header nav a {
   color: var(--bodytext);
 
@@ -74,20 +68,12 @@ nav a:hover {
   text-decoration: underline;
 }
 
-main {
-  display: flex;
-  flex: 1;
-  max-width: 1200px;
-  margin: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+/* Footer Section */
 footer {
-  /* position:relative; */
-  /* z-index: 1; */
   width: 100%;
   text-align: center;
   margin-top: 2rem;
+  font-size: 2rem;
 }
 
 .hero {
@@ -100,7 +86,6 @@ footer {
 }
 
 .hero h1 {
-  /* 4rem = 40px (4 * 10px) */
   font-size: 5rem;
   font-family: var(--mont);
   font-weight: 400;
@@ -118,14 +103,15 @@ footer {
   font-style: italic;
 }
 
-/* .content{
-      display: flex;
-  } */
-#about-me {
-  position: relative;
-  display: flex;
-  height: 100%;
-}
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    background-color: var(--background);
+  }
+
 .content-container {
   position: relative;
   padding: 2rem;
@@ -135,9 +121,7 @@ footer {
   width: 100%;
 }
 .section-title {
-  /* display: flex; */
   font-family: var(--mont);
-  /* letter-spacing: 1rem; */
   width: 14rem;
   padding-right: 1rem;
   margin-right: 2rem;
@@ -145,21 +129,19 @@ footer {
 
 }
 
-#about-me img {
-  top: 2rem;
-  float: left;
-  margin-right: 2.5rem;
-}
-#about-me p {
-  position: relative;
-  top: 2rem;
-  text-align: justify;
-  height: 100%;
-}
-.float-left {
- 
+#about-me {
+  display: block;
 }
 
+
+.about-me-p {
+    position:relative;
+top: -5rem;
+  text-align: justify;
+  margin-left: 22rem;
+  font-size: 1.5rem;
+  width:50%;
+}
 
 .grind {
   flex: 4;
@@ -177,11 +159,9 @@ footer {
   flex: 0 0 400px;
 }
 
-.card header {
-  
-}
 .card-heading{
-    padding: 2re,;
+
+    top: -20rem;
 }
 
 .card p {
@@ -199,14 +179,18 @@ footer {
     flex: 1;
   }
 #holler {
+    display: flex;
     text-align: center;
     justify-content: center;
 }
-#holler ul {
-    display: flex;
+ ul {
+    display:flex;
     justify-content: space-between;
     min-width: 300px;
     font-family: var(--mont);
+  }
+  ul li {
+      padding-right: 2rem;
   }
   
  #holler a {
@@ -219,14 +203,20 @@ footer {
     text-decoration: underline;
   }
 
-  /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
+  /* #grind-container{
+      position: relative;
 
-  @media screen and (min-width: 390px) {
-    /* on phones, set columns to only be 33% of the width and not grow */
-  
+  }
+
+  #holler-container{
+    position: relative;
+} */
+
+   @media screen and (max-width: 562px) {
+    
       
-      .hero h1 {
-        /* 4rem = 40px (4 * 10px) */
+       .hero h1 {
+ 
         font-size: 5rem;
         font-family: var(--mont);
         font-weight: 400;
@@ -239,46 +229,41 @@ footer {
         font-weight: 600;
       }
     
-      #about-me img {
+      .float-left {
         top: 2rem;
-        width:33%;
-        height:33%;
+        padding:1rem 1rem 1rem 1rem;
+        display: block;
         float:none;
       }
     
       .card{
       flex: 0 0 100%;
       max-width: 100%;
+      margin:0 1rem 1rem 0;
     }
-
-  @media screen and (min-width: 768px) {
-    /* on tablets, set columns to only be 50% of the width and not grow */
-    .card-column {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-  
-    /* select the last child to grow to full width if it has space to grow */
-    .card-column:last-child {
-      flex-grow: 1;
-    }
+    #holler ul {
+        display: block;
+        justify-content: space-between;
+        /* min-width: 200px; */
+        font-family: var(--mont);
+        font-size: 1rem;
+      }
   }
-  #holler ul {
-    display: inline-block;
-    justify-content: space-between;
-    min-width: 200px;
-    font-family: var(--mont);
-    font-size: 1rem;
-  }
+  @media screen and (max-width: 768px) {
+   
+    #holler ul {
+        display: block;
+        justify-content: space-between;
+        min-width: 200px;
+        font-family: var(--mont);
+        font-size: 1.5rem;
+      }
   
-  /* media query for larger screens */
-  @media screen and (min-width: 992px) {
+  }
+ 
+  
+  @media screen and (max-width: 769) {
     header {
       width: 100%;
-    }
-  
-    .card-column {
-      flex: 0 0 33.333%;
-      max-width: 33.333%;
-    }
-  }
+    } 
+} 
