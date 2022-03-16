@@ -10,9 +10,9 @@ This site is contains my portfolio. It uses follows best practices for web acces
 
 ## Screenshot
 
-![The Horiseon webpage includes a navigation bar, a header image, and cards with text and images at the bottom of the page.](./assets/images/full-page-screenshot.png)
+![The MyPortfolio webpage includes a navigation bar, a hero section, my smiling face, and cards with text and images at, and a contact section the bottom of the page.](./assets/images/Screenshot.png)
 
-> **Note**: This layout is designed for desktop viewing.The minimum resolution is 768px. It is not responsive.
+> **Note**: This layout is responsive down to 480px. 
 
 ##
 
